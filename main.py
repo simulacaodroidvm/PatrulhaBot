@@ -5,7 +5,7 @@ from datetime import datetime, timedelta, time as dtime
 from keep_alive import keep_alive
 import pytz, json, os
 
-TOKEN = 'TOKEN'  # Substitua pelo seu token
+token = os.getenv("TOKEN")  # Substitua pelo seu token
 CANAL_LOGS_ID = 1395842082790179036  # Substitua pelo ID do canal de logs
 CANAL_RANKING_ID = 1395952949938622464  # Substitua pelo ID do canal de ranking
 ARQUIVO_DADOS = 'dados.json'
@@ -186,4 +186,5 @@ async def on_ready():
     print(f"✅ Bot conectado como {bot.user}")
 
 keep_alive()
+token = os.getenv("TOKEN")
 bot.run("TOKEN")
