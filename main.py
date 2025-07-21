@@ -187,4 +187,4 @@ async def on_ready():
 
 keep_alive()
 token = os.getenv("TOKEN")
-bot.run("TOKEN")
+bot.run(token)
